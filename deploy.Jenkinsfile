@@ -1,5 +1,5 @@
 pipeline {
-    agent any {
+    agent any 
     parameters {
         string(name: 'APP_VERSION', defaultValue: '503', description: 'Application Verson to be Deployed')
     }
@@ -10,7 +10,6 @@ pipeline {
                     sh "aws eks update-kubeconfig --name dev-eks-cluster"
                     sh "kubectl get nodes"
                     sh "kubectl apply -f k8-deploy.yaml"
-                }
             }
         }
     }
