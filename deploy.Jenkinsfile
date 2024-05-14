@@ -1,7 +1,7 @@
 pipeline {
     agent any {
     parameters {
-        string(name: 'APP_VERSION', defaultValue: '505, description: 'Application Verson to be Deployed')
+        string(name: 'APP_VERSION', defaultValue: '503, description: 'Application Verson to be Deployed')
     }
         stages {
             stage('Deploy') {
